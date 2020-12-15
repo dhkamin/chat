@@ -1,0 +1,133 @@
+<div style="width: 100%; height: 100%; max-height: 100%; max-width: 100%; padding: 0px;" class="center-block bg dad">
+     
+  <div id="room" style="height: 100%; width:100%; display: flex;  flex-direction: column; " class="break  fr  ">
+
+    <div (click)="onClose('close')" >
+        <div width="99.5%"  class="bg" style="position: sticky;color: #000000;text-align: center;border-radius: 5px 5px 5px5px;border-bottom: 2px solid #ffffff;border-top: 2px solid#ffffff;padding-bottom: 2px!important;"><font style="background-color: #fff;border-radius: 15px 15px 15px 15px;font-family: 'jazeera',FontAwesome;padding: 2px 10px 2px 10px;margin: 7px 10px 7px 10px;">اهلا وسهلا بكم في ( بنوتة قلبي ) نتمنى لكم اطيب الاوقات</font></div>
+  </div>
+ 
+  <div  id="divExample" onclick="$('.dpnl').hide();" class="d2   light filh  break support" style="height: 870px;" (click)="onClose('close')" >
+        
+    
+        <!-- 
+    <div class="uzr fl corner borderg hmsg mm" style="border-radius:5px;margin-bottom:-2px;width:99.5%;padding:0px; background-color:white;" *ngFor="let msg of messages; let i =index;" >
+          <img style="width: 36px; height: 38px; margin-left: 1px; margin-top: 1px; background-image: url(../../assets/1df9rmm5i10.jpeg.jpg);" class="fl fitimg hand u-pic"(click)=" openDialog(msg)">
+          <span style="margin-top:2px;padding:0px 2px;margin-left:-20px;margin-right:4px;color:grey" class="fr minix tago" ago="1563343421792">الآن</span>
+          <div class="uzr fl" style="padding:0px;width:80%">
+            <div style="padding:0px;width:100%;" class="fl">
+              <img class="fl u-ico" alt="" src="../../assets/imgg/z1crbn8ci410.gif">
+              <span style="padding: 1px 8px; margin-top: 2px; display: block; max-width: 82%; border-radius: 3px; color: rgb(97, 255, 239); background-color: rgb(255, 62, 23);" class="corner nosel u-topic dots fl hand">{{msg.fromUser}} </span>
+            </div>
+            <br>
+            <div  style="padding: 0px; width: 100%; color: black;" class=" u-msg   break  fl">{{msg.message}}   <div class="fl fa fa-sign-in btn btn-primary dots roomh border corner" style="padding:4px;max-width:180px;min-width:60px;" onclick="rjoin('16bfe5ad9bcx6c2d55c6-xnmsss6')">( 3 ) الغرفه العامه</div>&nbsp;</div>
+          </div>
+    </div> -->
+   
+     <div class="uzr fl corner borderg hmsg mm" style="border-radius:5px;margin-bottom:-2px;width:99.5%;padding:0px; background-color:white;" *ngFor="let msg of messages; let i =index;">
+      <img style="width: 36px; height: 38px; margin-left: 1px; margin-top: 1px; background-image: url(../../assets/1df9rmm5i10.jpeg.jpg);" class="fl fitimg hand u-pic"(click)=" openDialog(msg)">
+      <span style="margin-top:2px;padding:0px 2px;margin-left:-20px;margin-right:4px;color:grey" class="fr minix tago" ago="1563343421792">الآن</span>
+      <div class="uzr fl" style="padding:0px;width:80%">
+        <div style="padding:0px;width:100%;" class="fl">
+          <img class="fl u-ico" alt="" src="../../assets/imgg/z1crbn8ci410.gif">
+          <span style="padding: 1px 8px; margin-top: 2px; display: block; max-width: 82%; border-radius: 3px; color: rgb(97, 255, 239); background-color: rgb(255, 62, 23);" class="corner nosel u-topic dots fl hand"> {{msg.fromUser}}</span>
+        </div>
+        <br>
+         <div class="fl fa fa-sign-in btn btn-primary dots roomh border corner" style="padding:4px;max-width:180px;min-width:60px;" onclick="rjoin('16bfe5ad9bcx6c2d55c6-xnmsss6')">( 3 ) الغرفه العامه</div>
+        <div    style="padding: 0px; width: 100%; color: black;" class=" u-msg   break  fl">{{msg.message}}  
+        </div>
+      </div> 
+     </div>
+     
+     <div class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fsefsefsefsefsefsefsefsefsefsefsefsef</div>
+     <div class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fsefsefsefsefsefsefsefsefsefsefsefsef</div>
+     <div class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fsefsefsefsefsefsefsefsefsefsefsefsef</div>
+     <div class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fsefsefsefsefsefsefsefsefsefsefsefsef</div>
+     <div class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fsefsefsefsefsefsefsefsefsefsefsefsef</div>
+     <div  id="lastscroll"> vdfvdfvdfvdfvdfvdfvdfvd</div>
+     
+  </div>
+<div onclick="$('.dpnl').hide();" class="tablebox footer fl light" style="border-bottom-right-radius: 1em;width:100%; padding: 1px; display: flex ; position: sticky;bottom: 35px" (click)="onClose('close')" >
+      <button onclick="send('rleave',{});" style=" margin-left:2px;margin-top:2px;" class="fa fa-sign-out fl btn btn-primary">&nbsp;</button>
+
+      <img tabindex="0" role="button" data-toggle="popover" data-trigger="focus" class="fl nosel emobox" style="padding:5px;width:34px;" src="../../assets/imgg/emoii.gif" data-original-title="" title="">
+      <textarea id="tbox"   #message maxlength="256" (keyup)="$event.keyCode == 13 && sendMessage()"   [(ngModel)]="mess"   placeholder="اكتب رسالتك هنا" class="fl corner tbox filw" style="width:94.4%;"></textarea>
+      <button (click)="sendMessage(mess)" style=" margin-left:2px;margin-top:2px;" class="fa fa-send fl btn btn-primary">إرسال</button>
+      
+    </div>
+ 
+  
+  <div  id="d0" onclick=" " class="nosel fl  bg" style="padding-left: 1px; margin-top: 1px; width: 100%; position: sticky; bottom: 0; display: inline-flex">
+    <label (click)="open('usersConnected')" title="المتواجدين" href="#" onclick="$('.pnhead').text($(this).attr('title'));setTimeout(function(){$('#users').scrollTop(0);},100);$('.dpnl').show();$('#usearch').val('');" data-toggle="tab" data-target="#users" class="ae fa label label-primary fa-user"><span class="busers minix  badge border" style="margin-top:-8px;padding:1px 4px;">191</span></label>
+    <label (click)="open('privateMsg')" title="المحادثات الخاصه" href="#" onclick="$('.pnhead').text($(this).attr('title'));hl($(this),'primary');setTimeout(function(){$('#users').scrollTop(0);},100);$('.dpnl').show();" data-toggle="tab" data-target="#chats" class="ae fa chats label fa-comment label-primary"><span class=" minix  badge border" style="margin-top:-8px;padding:1px 4px;"></span></label>
+    <label (click)="open('chambre')" title="غرف الدردشه" href="#" onclick="$('.pnhead').text($(this).attr('title'));$('.dpnl').show();" data-toggle="tab" data-target="#rooms" class="ae fa label label-primary fa-users"><span class="brooms minix  badge border" style="margin-top:-8px;padding:1px 4px;">52</span>الغرف</label>
+    <label (click)="open('mure')" title="الحائط" href="#" onclick="$('.pnhead').text($(this).attr('title'));$('.dpnl').show();setTimeout(function(){$('#d2bc').scrollTop(0);},100);hl($(this),'primary');$(this).find('.bwall').text('0');bcc=0;" data-toggle="tab" data-target="#wall" class="ae fa label fa-commenting-o label-warning"><span class="bwall  minix badge border" style="margin-top:-8px;padding:1px 4px;">4</span>الحائط</label>
+    <label (click)="open('parametre')" title="الإعدادات" href="#" onclick="$('.pnhead').text($(this).attr('title'));$('.dpnl').show();" data-toggle="tab" data-target="#settings" class="ae label label-primary fa fa-gear">الإعدادات</label> 
+  </div>
+  </div>
+
+</div>
+
+<div *ngIf="menu === 'usersConnected'" >
+  <div class="dpnl bg   tab-content" style="max-height: 95%;border: 1px solid; border-top-left-radius: 0.5em; width: 290px; padding-top: 20px; padding-bottom: 8px; height:  934px; position: absolute; top: 0px; right: 0;">
+  <label onclick="$(this).parent().hide();" (click)="onClose('close')" data-toggle="tab" data-target="#settings" class="label label badge-danger border nosel fa fa-close fr" style="margin-top:-18px;margin-bottom: 0px;margin-right:2px;border: 1px solid black;border-radius:6px;padding:6px 8px;">&nbsp;</label>
+  <label class="fl nosel label pnhead" style="margin:3px;margin-top:-18px;padding-left:10px;padding-right:10px;">المتواجدين</label>
+  <app-userconnected></app-userconnected>
+ </div>   
+</div>
+<div *ngIf="menu === 'privateMsg'" >
+  <div class="dpnl bg   tab-content" style="max-height: 95%;border: 1px solid; border-top-left-radius: 0.5em; width: 290px; padding-top: 20px; padding-bottom: 8px; height:  934px; position: absolute; top: 0px; right: 0;">
+  <label onclick="$(this).parent().hide();" (click)="onClose('close')" data-toggle="tab" data-target="#settings" class="label label badge-danger border nosel fa fa-close fr" style="margin-top:-18px;margin-bottom: 0px;margin-right:2px;border: 1px solid black;border-radius:6px;padding:6px 8px;">&nbsp;</label>
+  <label class="fl nosel label pnhead" style="margin:3px;margin-top:-18px;padding-left:10px;padding-right:10px;">المحادثات الخاصه</label>
+  <app-privatemsg></app-privatemsg>
+ </div>   
+</div>
+<div *ngIf="menu === 'chambre'" >
+  <div class="dpnl bg   tab-content" style="max-height: 95%;border: 1px solid; border-top-left-radius: 0.5em; width: 290px; padding-top: 20px; padding-bottom: 8px; height:  934px; position: absolute; top: 0px; right: 0;">
+  <label onclick="$(this).parent().hide();" (click)="onClose('close')" data-toggle="tab" data-target="#settings" class="label label badge-danger border nosel fa fa-close fr" style="margin-top:-18px;margin-bottom: 0px;margin-right:2px;border: 1px solid black;border-radius:6px;padding:6px 8px;">&nbsp;</label>
+  <label class="fl nosel label pnhead" style="margin:3px;margin-top:-18px;padding-left:10px;padding-right:10px;">غرف الدردشه</label>
+   <app-chambre></app-chambre>
+ </div>   
+</div>
+<div *ngIf="menu === 'mure'" >
+  <div class="dpnl bg   tab-content" style="max-height: 95%;border: 1px solid; border-top-left-radius: 0.5em; width: 290px; padding-top: 20px; padding-bottom: 8px; height:  934px; position: absolute; top: 0px; right: 0;">
+  <label onclick="$(this).parent().hide();" (click)="onClose('close')" data-toggle="tab" data-target="#settings" class="label label badge-danger border nosel fa fa-close fr" style="margin-top:-18px;margin-bottom: 0px;margin-right:2px;border: 1px solid black;border-radius:6px;padding:6px 8px;">&nbsp;</label>
+  <label class="fl nosel label pnhead" style="margin:3px;margin-top:-18px;padding-left:10px;padding-right:10px;">الحائط</label>
+ <app-mure></app-mure>
+ </div>   
+</div>
+<div *ngIf="menu === 'parametre'" >
+  <div class="dpnl bg   tab-content" style="max-height: 95%;border: 1px solid; border-top-left-radius: 0.5em; width: 290px; padding-top: 20px; padding-bottom: 8px; height:  934px; position: absolute; top: 0px; right: 0;">
+  <label  (click)="onClose('close')" data-toggle="tab" data-target="#settings" class="label label badge-danger border nosel fa fa-close fr" style="margin-top:-18px;margin-bottom: 0px;margin-right:2px;border: 1px solid black;border-radius:6px;padding:6px 8px;">&nbsp;</label>
+  <label class="fl nosel label pnhead" style="margin:3px;margin-top:-18px;padding-left:10px;padding-right:10px;">الإعدادات</label>
+  <app-parametre></app-parametre> 
+ </div>   
+</div>
+
+
+<!-- send message   -->
+
+ <div  *ngIf="sendmsg === 'sendMsgprive'" > 
+    
+  <div style="width: 100%; height: 100%; max-height: 100%; max-width: 100%; padding: 0px;" class="center-block bg dad">
+    <div class="bgg border corner w16bf0c30de6x33866712-xwo0sj9 active" style="border-bottom-right-radius: 1em; overflow-y: hidden; position: absolute; top: 1px; min-height: 180px; max-height: 500px; height: 50%; width: 97%; max-width: 500px; padding-bottom: 25px;">
+      <div style="width:100%;height:30px;" class="head nosel bg fl">
+        <label class="label fl hand fa border fa-user" style="margin:2px;margin-right: 2px;">&nbsp;</label>
+        <label style="padding:8px;" class="btn minix btn-danger phide fr border fa fa-minus" (click)="closeSendmsgprive()">&nbsp;&nbsp;</label>
+        <label style="padding:8px;" onclick="var pp=$(this).parent().parent();if($(this).hasClass('fa-expand')){pp.css('height','86%');}else{pp.css('height','50%');}$(this).toggleClass('fa-expand fa-compress');fixSize();" class="btn   btn-info   fr border fa fa-expand">&nbsp;&nbsp;</label>
+        
+    <div class="fl  uzr" style="margin:3px;width:60%; display: flex;position: relative;">
+      <img class="fl ustat" style="width: 12px; height: 12px; border-radius: 12px; position: static; margin-top: 10px; margin-left: 0px;" src="../../assets/imgg/s1.png?2">
+      <img style="width: 20px; height: 20px; background-image: url(../../assets/1df9rmm5i10.jpeg.jpg);" class="fitimg fl hand u-pic ">
+      <div style="width: 280px;" class="fl filw">
+        <div style="width:100%;margin-top:0px;" class="fl">
+          <img class="fl u-ico" alt="" src="">
+          <div class="fl" style="width:90%;"><span style="max-width: 100%; padding: 1px 8px; border-radius: 3px; color: rgb(0, 0, 0); background-color: rgb(250, 250, 250);" class="corner nosel u-topic dots">uiuiouo</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+     <app-sendmsg-privee></app-sendmsg-privee>
+    </div>
+	</div>
+ 
+</div>

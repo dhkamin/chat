@@ -1,0 +1,92 @@
+.chowprofile-top{
+    display: flex;
+    background-color: #024349!important;
+    width: 440px;
+    margin: -24px 0px 5px -24px;
+}
+.chowprofile-top-l{
+width: 60%;
+}
+.chowprofile-top-s{
+width: 30%;
+}
+.chowprofile-top-title{
+color: white;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    position: relative;
+    left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.chowprofile-top-btn{
+    background-color: gray;
+    color: white;
+    position: relative;
+    right: 10px;
+    top: 5px;
+    border-radius: 20px;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.chowprofile{
+ display: flex;
+ flex-direction: column;
+ width: 240px;
+}
+.chowprofile-t{
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+   
+    width: 100%;
+}
+.chowprofile-image{
+    width: 240px;
+    height: 240px;
+}
+.chowprofile-text{
+    width: 240px;
+   
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+.chowprofile-b{
+    margin-block-start: 0px;
+    display: flex;
+    width: 390px;
+    margin: 2px
+}
+.chowprofile-b-btn{
+    margin-right: 8px;
+    width: 122px;
+}
+.chowprofile-m{
+    display: flex;
+    width: 400px;
+}
+.chowprofile-m-l{
+    width: 230px;
+}
+
+.chowprofile-m-btn{
+    color: white;
+    background-color: #024349!important;
+    width: 152px;
+    border: 0px;
+    text-align: center;
+}
+.chowprofile-m-btn-img{
+ width: 40px;
+ height: 40px;
+ position: relative;
+    top: 2px;
+}
+.chowprofile-m-btn-text{
+    position: relative;
+    top: -10px;
+   }

@@ -1,0 +1,172 @@
+ <!-- <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+    <mat-tab >
+      <ng-template mat-tab-label  class="menu" >
+        <mat-icon class="example-tab-icon">person</mat-icon>
+       <span > دخول الزوار</span>
+
+
+      </ng-template> <form [formGroup]="guestform" (ngSubmit)="onSubmitGuest()">
+          <div class="content-guest">
+              <mat-form-field class="example-form-field">
+                  <input matInput type="text" placeholder="أكتب الاسم المستعار" formControlName="username"  [ngClass]="{ 'is-invalid': submittedguest && formguest.username.errors }" >
+              </mat-form-field>
+  
+              <div *ngIf="submittedguest && formguest.username.errors" class="invalid-feedback">
+                  <div *ngIf="formguest.username.errors.required">اسم المستعار مطلوب</div>
+              </div>
+
+              <button  [disabled]="loading"  mat-raised-button  class="button-menu"  >دخول</button>
+          </div>
+      </form>
+    
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label >
+        <mat-icon class="example-tab-icon">person</mat-icon>
+        <span >دخول الاعضاء</span>
+      
+      </ng-template>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+        <div class="content-member">
+            <mat-form-field class="example-form-field">
+                <input matInput type="text" placeholder="أكتب اسم العضو" formControlName="username"  [ngClass]="{ 'is-invalid': submittedLogin && formlogin.username.errors }" >
+            </mat-form-field>
+
+            <div *ngIf="submittedLogin && formlogin.username.errors" class="invalid-feedback">
+                <div *ngIf="formlogin.username.errors.required">اسم المستخدم مطلوب</div>
+            </div>
+
+            <mat-form-field class="example-form-field">
+                <input matInput type="password" placeholder="أكتب كلمةالمرور" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submittedLogin && formlogin.password.errors }" >
+            </mat-form-field>
+            <div *ngIf="submittedLogin && formlogin.password.errors" class="invalid-feedback">
+                <div *ngIf="formlogin.password.errors.required">كلمة المرور مطلوبة</div>
+            </div>
+
+            <button  [disabled]="loading"  mat-raised-button  class="button-menu"  >دخول</button>
+
+
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <mat-checkbox>دخول مخفي</mat-checkbox>
+        </div>
+    </form>
+
+
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label >
+        <mat-icon class="example-tab-icon">person_add</mat-icon>
+        <span >تسجيل عضويه</span>
+       
+      </ng-template>
+
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class='mdl-grid'>
+        <div class="content-member" >
+            <mat-form-field class="example-form-field">
+                <input matInput type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="أكتب اسم العضو" >
+            </mat-form-field>
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">اسم المستخدم مطلوب</div>
+            </div>
+
+            <mat-form-field class="example-form-field">
+                <input matInput type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="أكتب كلمةالمرور" >
+            </mat-form-field>
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">كلمة المرور مطلوبة</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+
+            <button mat-raised-button [disabled]="loading" class="button-menu">دخول</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        </div>
+      </div>
+    </form>
+    </mat-tab>
+  </mat-tab-group> 
+ -->
+
+
+
+
+	   
+  <div class="tabs">
+    <div class="tab-button-outer">
+      <ul id="tab-button">
+        <li class="is-active"><a data-toggle="tab" style="padding: 10px 8px;" class="  fa fa-user" href="#tab01" aria-hidden="true">دخول الزوار</a></li>
+        <li class=""><a data-toggle="tab" style="padding: 10px 8px;" class=" fa fa-user" href="#tab02" aria-expanded="true" aria-hidden="true">دخول الاعضاء</a></li>
+        <li class=""><a data-toggle="tab" style="padding: 10px 8px;" class=" fa fa-user-plus" href="#tab03" aria-hidden="true"> تسجيل عضويه</a></li>
+    
+    
+      </ul>
+    </div>
+  
+    <div id="tab01" class="tab-contents" >
+        <form [formGroup]="guestform" (ngSubmit)="onSubmitGuest()" style="max-height: 67px;">
+           
+            <input id="u2" class="border corner" placeholder="اكتب اسم العضو"  formControlName="username"  [ngClass]="{ 'is-invalid': submittedguest && formguest.username.errors }">   
+                <div *ngIf="submittedguest && formguest.username.errors" class="invalid-feedback">
+                    <div *ngIf="formguest.username.errors.required">اسم المستعار مطلوب</div>
+                </div>
+                <button  class="btn btn-primary"  [disabled]="loading" >دخول</button>
+                <div class="checkbox" style="margin:0px;display:inline;">
+                </div>     
+              </form>  
+          </div> 
+
+
+          <div id="tab02" class="tab-contents" style="display: none;">
+          
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()"  style="max-height: 90px;">
+             
+                  <input   id="u2" class="border corner"  placeholder="أكتب اسم العضو" formControlName="username"  [ngClass]="{ 'is-invalid': submittedLogin && formlogin.username.errors }" ><br>
+                   
+                      <div *ngIf="submittedLogin && formlogin.username.errors" class="invalid-feedback">
+                      <div *ngIf="formlogin.username.errors.required">اسم المستخدم مطلوب</div>
+                  </div>         
+                    <input id="pass1" class="border corner"  type="password" placeholder="أكتب كلمةالمرور" formControlName="password"  [ngClass]="{ 'is-invalid': submittedLogin && formlogin.password.errors }" >            
+                    <div *ngIf="submittedLogin && formlogin.password.errors" class="invalid-feedback">
+                    <div *ngIf="formlogin.password.errors.required">كلمة المرور مطلوبة</div>
+                </div>
+                  <button  [disabled]="loading"  class="btn btn-primary" >دخول</button>          
+                  <div class="checkbox" style="margin:0px;display:inline;">
+                    <label><input id="stealth" type="checkbox" value="">دخول مخفي</label>
+                  </div> 
+              
+          </form>
+                                        
+        </div>
+
+
+    <div id="tab03" class="tab-contents" style="display: none;">
+      
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" style="max-height: 90px;">
+     
+       
+             
+                <input   id="u2" class="border corner" type="text" formControlName="username"  [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="أكتب اسم العضو" >
+         
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">اسم المستخدم مطلوب</div>
+            </div>
+
+                <input  id="pass1" class="border corner" type="password" formControlName="password"  [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="أكتب كلمةالمرور" >
+              
+
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">كلمة المرور مطلوبة</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+
+            <button [disabled]="loading" class="btn btn-primary">دخول</button>
+            <div class="checkbox" style="margin:0px;display:inline;"> </div>   
+    </form>
+                        
+     </div>
+   
+  </div>
+  

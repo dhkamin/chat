@@ -1,0 +1,67 @@
+ <!-- <div class="add-chambr-top">
+    <div class="add-chambr-top-l">  <p class="add-chambr-top-title">إنشاء غرفه جديدة</p></div>
+     <div class="add-chambr-top-s"></div>
+    <div class="add-chambr-top-r">
+      <button  (click)="onNoClick()" class="add-chambr-top-btn"><mat-icon >close</mat-icon></button>
+      
+    </div>
+  
+  
+
+ </div>
+<div mat-dialog-content>
+   
+    <div class="add-chambr-from">
+        <div class="add-chambr-from-l">
+            <input type="text"  [(ngModel)]="data.AdresseRoom" placeholder="عنوان الغرفه">
+            <input type="text"  [(ngModel)]="data.PsudoRoom" placeholder="الوصف">
+            <input type="text"  [(ngModel)]="data.MessageInitRoom" placeholder="رساله الترحيب">
+            <input type="text"  [(ngModel)]="data.PasswordRoom" placeholder="كلمه المرور">
+            <input type="number" [(ngModel)]="data.TailleRoom" placeholder="حجم الغرفه من 2 ألى 40">
+         
+        </div>
+        <div class="add-chambr-from-r">
+          <div><input type="checkbox" name="vehicle1" value="Bike">تثبيت الغرفه</div>
+            
+        </div> 
+    </div>
+
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button [mat-dialog-close]="data" cdkFocusInitial class="add-chambr-add-btn"  ><mat-icon >add</mat-icon>(20)إنشاء الغرفه</button>
+</div>   -->
+
+
+
+  <div class="modal-content" style="width:310px; margin: -24px; ">
+    <div style="color:white;" onclick="$(this).parent().parent().parent().modal('hide') ;" class="modal-header label-primary">
+      <span class="pull-right clickable badge" (click)="onNoClick()" ><i class="fa fa-times"></i></span>
+      <label style="margin:1px;" class="mini fa fa-comments modal-title">إنشاء غرفه جديدة</label>
+    </div>
+    <div class="modal-body" style="padding:1px;">
+      <div class="break" style="background-color:#efefef;padding:5px;">
+        <input class="rtopic" style="width:200px;" type="text" placeholder="عنوان الغرفه" [(ngModel)]="data.AdresseRoom">
+        <input class="rabout" style="width:200px;" type="text" placeholder="الوصف" [(ngModel)]="data.PsudoRoom">
+        <input class="rwelcome" style="width:200px;" type="text" placeholder="رساله الترحيب"  [(ngModel)]="data.MessageInitRoom">
+        <input class="rpwd" style="width:200px;" type="password" placeholder="كلمه المرور"  [(ngModel)]="data.PasswordRoom">
+        <input class="rmax" style="width:200px;" type="number" placeholder="حجم الغرفه من 2 ألى 40" min="2" max="40" [(ngModel)]="data.TailleRoom">
+        <label class="checkbox-inline"><input class="rdel" type="checkbox" value="">تثبيت الغرفه</label><br><br>
+        <div mat-dialog-actions>
+        <button  [mat-dialog-close]="data" class="rmake btn btn-primary fl"><span class="fa fa-plus">(20)إنشاء الغرفه</span></button>
+        </div>
+        <button class="rsave btn btn-primary fl" style="display: none;"><span class="fa fa-edit">حفظ التعديلات</span></button>
+        <button class="rdelete btn btn-danger fr" style="display: none;"><span class="fa fa-times">حذف</span></button>
+        <div class="break border corner" id="ops" style="width:100%;padding:2px;"> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<style>
+  .mat-dialog-container {
+    margin: 0;
+    padding:0;
+    }
+</style>

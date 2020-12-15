@@ -1,0 +1,51 @@
+.add-chambr-top{
+    display: flex;
+    background-color: #024349!important;
+    width: 440px;
+    margin: -24px 0px 5px -24px;
+}
+.add-chambr-top-l{
+width: 60%;
+}
+.add-chambr-top-s{
+width: 30%;
+}
+.add-chambr-top-title{
+color: white;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    position: relative;
+    left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.add-chambr-top-btn{
+    background-color: gray;
+    color: white;
+    position: relative;
+    right: 10px;
+    top: 5px;
+    border-radius: 20px;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+}
+.add-chambr-from{
+    display: flex;
+    width: 100%;
+}
+.add-chambr-from-l{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.add-chambr-from-r{
+display: flex;
+flex-direction: column-reverse;
+width: 30%;
+}
+.add-chambr-add-btn{
+    background-color: #024349!important;
+    color: white;
+}

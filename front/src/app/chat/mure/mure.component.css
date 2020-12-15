@@ -1,0 +1,112 @@
+/* .content-mure{
+  display:  flex; 
+  height: 650px;
+  overflow-y: scroll;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+
+.content-mure-box{
+    width: 99%;
+    min-height: 63px;
+    display: flex;
+ 
+    border-width : 1px; 
+    border-color :rgb(177, 177, 177);
+    border-style : solid;
+   
+    
+   
+  }
+  .button-mure{
+    margin-top: 2px;
+    background-color: rgb(155, 155, 155);
+    color: #333;
+    margin-right: 3px;
+    height: 30px;
+    padding-right: 3px;
+    padding-left: 3px;
+    min-width: 0px;
+    
+    vertical-align: bottom;
+    font-size: 16px;
+    font-weight: 700;
+    height: 28px;
+  
+  }
+  .content-mure-box-img{
+    min-width: 62px;
+    min-height: 62px;
+    max-width: 62px;
+    max-height: 62px;
+    border-width : 1px; 
+    border-color : black;
+    border-style : solid;
+  }
+  .content-mure-box-content{
+    margin-left: 4px;
+    width: 92%;
+  }
+ 
+  .content-mure-top-icon{
+  
+    position: relative;
+    top: -3px;
+  }
+  
+  .content-mure-box-content-bottom{
+    margin-top: -2px;
+  }
+  .content-mure-box-content-left{
+    width: 10%;
+    margin-right: 4px;
+    direction: rtl;
+  }
+  .button-content-mure-box-content-left{
+    
+    background-color: #d9534f;
+    color: white;
+    max-width: 0px;
+    min-width: 35px;
+    position: relative;
+    bottom: -8px;
+    right: -4px;
+    height: 28px;
+  }
+  .span-button-content-mure-box-content-left{
+    position: relative;
+    bottom: 1px;
+    right: -15px;
+  }
+  .icon-content-mure-box-content-left{
+    position: relative;
+    bottom: 5px;
+    right: -15px;
+  } */
+/* 
+  .supportScoroll{
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+  }/* Track */
+  /* ::-webkit-scrollbar-track {
+    background: transparent; 
+  } */
+   
+  /* Handle */
+  /* ::-webkit-scrollbar-thumb {
+    background: transparent; 
+  } */
+  
+  /* Handle on hover 
+  ::-webkit-scrollbar-thumb:hover {
+    background :transparent; 
+  } */

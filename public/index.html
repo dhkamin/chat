@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Front</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./assets/CSS_SRIPTS/bootstrap-theme.min.css" >
+  <link rel="stylesheet" href="./assets/CSS_SRIPTS/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/CSS_SRIPTS/font-awesome.min.css">
+  <script src="./assets/CSS_SRIPTS/bootstrap.min.js"></script>
+  <script src="./assets/CSS_SRIPTS/jquery-1.11.1.min.js"></script> -->
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/c040531093.js"></script>
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+ 
+
+    <title>Bootstrap 4 Login/Register Form</title>
+
+</head>
+<body>
+  <app-root>
+    
+  </app-root>
+
+
+  
+
+
+<script>
+
+    $(function() {
+    var $tabButtonItem = $('#tab-button li'),
+        $tabSelect = $('#tab-select'),
+        $tabContents = $('.tab-contents'),
+        activeClass = 'is-active';
+
+    $tabButtonItem.first().addClass(activeClass);
+    $tabContents.not(':first').hide();
+  
+    $tabButtonItem.find('a').on('click', function(e) {
+      var target = $(this).attr('href');
+  
+      $tabButtonItem.removeClass(activeClass);
+      $(this).parent().addClass(activeClass);
+      $tabSelect.val(target);
+      $tabContents.hide();
+      $(target).show();
+      e.preventDefault();
+    });
+  
+    $tabSelect.on('change', function() {
+      var target = $(this).val(),
+          targetSelectNum = $(this).prop('selectedIndex');
+  
+      $tabButtonItem.removeClass(activeClass);
+      $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+      $tabContents.hide();
+      $(target).show();
+    });
+  });
+  $( document ).ready(function() {
+  var height = $('#content').outerHeight();
+  console.log(height);
+  var heightS = $(window).height();
+  console.log(heightS);
+          $(".ex3").height(heightS-height-40);
+  });
+  
+  window.onresize = function() {
+     var height = $('#content').outerHeight();
+  console.log(height);
+  var heightS = $(window).height();
+  console.log(heightS);
+          $(".ex3").height(heightS-height-40);
+  
+  }
+  
+    </script>
+    <style>
+      * {
+      font-family: serif;
+      font-weight: bold;
+      text-shadow: none!important;
+      font-size: 15px !important;
+  }
+      .ae {
+        padding-top: 6px;
+        padding-bottom: 3px;
+        padding-left: 2px;
+        border: 1px solid black;
+        border-radius: 2px;
+        margin: 1px;
+        float: left; 
+        padding: 6px 8px;
+      }
+      .pmsgc {
+        background-color: rgba(0, 77, 255, 0.08)!important;
+      }
+      .hmsg {
+        background-color: linen!important;
+      }
+      .label-primary,
+      .btn-primary,
+      .bg-primary,
+      .label-primary:hover,
+      .btn-primary:hover,
+      .btn-primary:focus {
+        background-color: #438ac7;
+        background-image: none;
+      } 
+      .bg {
+        background-color: #C0C0C0;
+      } 
+      .bgg {
+        background-color: lightslategray;
+      } 
+      .pophead {
+        background-color: slategrey;
+      }
+      
+      .light {
+        background-color: #FEFFFC;
+      }
+      .label-primary,.btn-primary{  
+        background-color: #171447!important;
+      }
+      .hid {
+        display: none;
+      }
+    </style>
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+</html>

@@ -1,0 +1,47 @@
+<!-- <div class="content-guest-user" >
+
+        <div class="content-guest-box" *ngFor="let user of usrs; let i =index;" > 
+      
+          <div  class="div-box-img" >
+              <img src="../../assets/z1d7prg6rk10.jpeg" alt="" class="box-img1"  >
+          </div>
+            <div class="content-guest-box-content">
+                   
+                   <div class="content-guest-box-content-top"> <img src="../../assets/imgg/z1crbn8ci410.gif" alt="" class="pack-user"  >{{user.username}} </div>
+              <div  class="content-guest-box-content-bottom"> 
+                  <span> {{user.type}} </span>
+              </div>
+            </div>
+            <div  class="div-flag" >  
+                <img src="../../assets/imgg/sa.gif" alt=""   class="flag"  >
+            </div>
+           
+        </div>
+       
+      </div> -->
+
+
+ <div id="chats" style="height: 100%;width:100%; margin-top: 13px" class="break light tab-pane border active support ">
+
+    <div   *ngFor="let user of usrs; let i =index;"  id="c16c0eb61b94xefafe5e2-xuf6aa3" onclick="" style="width:99%;padding: 1px 0px;" class="cc noflow nosel   hand break"><div class="hand nosel fl uzr border" style="text-align: left; background-color: white; width: 76%; padding: 1px; border-radius: 0px !important; margin: 0px 1px -1px 2px !important;" onclick="openw('16c0eb61b94xefafe5e2-xuf6aa3',true);">
+        <img class="fl ustat" style="width: 12px; height: 12px; margin-left: 0px; border-radius: 12px; position: static; margin-top: 10px;" src="../../../assets/s0.png">
+        <img style="width: 24px; height: 24px; margin-left: 1px; background-image: url(../../../assets/z1d821612710.jpg);" class="fitimg fl u-pic ">
+        <label class="fl muted fa" style="color:indianred;">&nbsp;</label>
+        <img alt="" class="fr co" style="width:16px;border-radius:1px;">
+        <div style="width:72%;" class="fl">
+          <div style="width:100%;margin-top:-2px;" class="fl">
+            <img class="fl u-ico" alt="" src="dro3/z1d4pn481k10.gif">
+            <div class="fl" style="width:82%;">
+              <span style="margin-top: 1px; padding: 0px 8px; max-width: 100%; border-radius: 3px; background-color: rgb(255, 255, 255); color: rgb(63, 65, 117);" class="corner u-topic dots"> 
+
+                  {{user.username}} </span>
+              </div>
+          </div>
+          <div style="width:100%;color:#888;margin-top:-8px;" class="fl mini u-msg dots">.. {{user.type}}</div>
+        </div>
+      </div>
+      <div  style="margin-top:3px;margin-right:2px;" class="label border mini badge-danger fr fa fa-times">حذف</div>
+    </div>
+    
+
+  </div>

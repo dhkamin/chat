@@ -1,0 +1,47 @@
+<!-- <div class="chambre-content">
+     <div class="top-chambre-content">
+        <button mat-raised-button  (click)="openDialog()"  class="button-top-chambre-content" ><mat-icon >add</mat-icon>غرفه جديدة </button>
+     </div>
+     <div class="body-chambre-content">
+    
+        <div  *ngFor="let rms of ListRooms ; let i = index" class="content-chambre-box">
+            <div>
+                <img src="../../assets/z1d7prg6rk10.jpeg" alt=""  class="content-chambre-box-img" >
+            </div>
+            
+            <div class="content-chambre-box-content">
+              <div *ngIf="rms.type=='1'" > ({{i}}) الغرفه العامه </div>
+              <div *ngIf="rms.type=='2'" > ({{i}}) الغرفه  </div>
+              <div  class="content-chambre-box-content-bottom">
+                  <span class=""> {{rms.name}}</span>
+              </div>
+            </div>
+            <div class="body-chambre-box-content-left" >
+              <span class="span-chambre-user">1/{{rms.size}}</span> 
+              <mat-icon class="content-chambre-top-icon" >person</mat-icon>
+              
+            </div>
+          
+          </div>
+         
+     </div>
+</div> -->
+<div id="rooms" style="height: 100%;width:100%; margin-top: 13px;" class="light border break tab-pane active " >
+    <div style="width:100%;margin:0px;border:none;border-radius:0px;" class="nosel label-primary fl  bgg">
+      <button  (click)="openDialog()"  class="border btn label label-success fl   fa fa-plus " style="margin:1px;">غرفه جديدة</button>            
+    </div>
+    <div class="d2 light fl  d2bc filh break support " style="width: 100%; height: 835px;" >
+       <div *ngFor="let rms of ListRooms ; let i = index"  class="room  borderg hand nosel fl r16be4a4a8b1xe9c470dx-x27f7n inroom bord" style="border-radius:0px!important;background-color:white; width:99%;padding:3px;margin:0px;margin-left:2px;" onclick="rjoin('16be4a4a8b1xe9c470dx-x27f7n');" v="21">
+        <img style="width:32px;height:32px;margin-right:4px;" class="fl u-pic " src="../../../assets/prv1.png">
+        <span class="corner fa fa-user label label-primary fr uc" style="padding:4px;margin-right:-1px;border-radius: 3px;" v="21">1/{{rms.size}}</span>
+        <div style="width:64%;" class="fl">
+          <div style="width:100%;margin-top:-1px;" class="fl">
+              <div  *ngIf="rms.type=='1'" style="width:78%;" class="u-topic ui-corner-all dots">( {{i}} ) الغرفه العامه</div>
+              <div  *ngIf="rms.type=='2'"style="width:78%;" class="u-topic ui-corner-all dots">( {{i}} ) الغرفه </div>
+          </div>
+          <div style="width:100%;color:#888;margin-top:-8px;" class="fl mini u-msg">غرفه عامه ..</div>
+        </div>
+      </div> 
+     
+    </div>
+</div>

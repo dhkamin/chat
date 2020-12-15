@@ -1,0 +1,126 @@
+<!-- <div  class="dialogcontent">
+   
+  <div  class="dialogbody">
+
+      <div class="displayflexline">
+          <label  class="label-line" for="">الزخرفه</label>
+          <div class="space-line"></div>
+          <a href=""  mat-raised-button class="link-line"  > <span class="linkspanline">الملف الشخصي</span></a>
+    
+      </div>
+      <div  class="displayflexline">
+          <mat-form-field class="inputline">
+              <input matInput placeholder="أكتب الاسم المستعار" >
+            </mat-form-field>
+      </div>
+      <div  class="displayflexline" >
+          <label  class="label-line" for=""> الحاله</label>
+      </div>
+      <div>
+          <div  class="displayflexline">
+              <mat-form-field  class="inputline" >
+                  <input matInput   type="text" placeholder="أكتب الاسم المستعار"  >
+              </mat-form-field>
+          </div>
+      </div>
+      <div  class="displayflexline" >
+          <label  class="label-line" for=""> لون الإسم</label>
+          <input type="text" class="inputlinecolor" name="" id="">
+      </div>
+      <div  class="displayflexline" >
+          <label  class="label-line" for=""> لون الخط</label>
+          <input type="text" class="inputlinecolor" name="" id="">
+      </div>
+      <div  class="displayflexline" >
+          <label  class="label-line" for="">لون الخلفيه </label>
+          <input type="text" class="inputlinecolor2" name="" id="">
+       
+          <a href=""  mat-raised-button class="link-line2"  > <mat-icon  class="link-line2-icon" >note_add</mat-icon><span class="linkspanline">الملف </span></a>
+    
+      </div>
+      <div></div>
+   
+     
+      <div class="display-button-dialog">
+          <select    class="select-style">
+              <option value="volvo">%120 - حجم الخطوط</option>
+              <option value="saab">%110 - حجم الخطوط</option>
+              <option value="mercedes">%105 - حجم الخطوط</option>
+              <option value="audi">%100 - حجم الخطوط</option>
+              <option value="audi">%95 - حجم الخطوط</option>
+              <option value="audi">%90 - حجم الخطوط</option>
+            </select>
+          <button   mat-raised-button   class="button-dialog"  > <img _ngcontent-c1="" alt="" class="img-dialog" src="../assets/prv1.png">تغير الصوره</button>
+          <button   mat-raised-button  style="background-color: #d9534f;" class="button-dialog"  > <mat-icon class="content-chat-top-icon" >publish</mat-icon><span class="button-disalog-span">حذف الصوره</span></button>
+          <button   mat-raised-button  class="button-dialog"  >تعطيل المحادثات الخاصه</button>
+          <button   mat-raised-button  class="button-dialog"  >تعطيل التنبيهات</button>
+          <button   mat-raised-button style="background-color: #d9534f;" class="button-dialog"  > <mat-icon class="content-chat-top-icon" >publish</mat-icon><span class="button-disalog-span">لوحه التحكم</span></button>
+          <button   mat-raised-button  (click)="onClick()"   style="background-color: #d9534f;" class="button-dialog"  > <mat-icon class="content-chat-top-icon" >publish</mat-icon><span class="button-disalog-span">تسجيل خروج </span></button>
+       </div>
+    
+     </div>
+</div> 
+ -->
+
+ <div id="settings" style="height: 99.5%;width:100%;    padding: 2px 5px;margin-top: 15px;" class="break border light tab-pane  active">
+        <a class="label label-primary  fr">الملف الشخصي</a>
+     <div class="borderg corner" style="background-color: white;margin-top:2px;">
+       <div>  
+         
+          
+         <div class=" label label-primary  ">الزخرفه</div>
+         <br> <input class="stopic  corner   dots" style="width: 80%; background-color: rgb(238, 238, 238);   margin-top: 2px; margin-bottom: 5px;" readonly="readonly">
+         <br>
+         <div class="   label label-primary">الحاله</div>
+         <br><input class="smsg  corner   dots" style="width:80%;   margin-top: 6px; margin-bottom: 2px;">
+         <br>
+       
+         <div class="   label label-primary">لون الإسم</div>
+         <input class="color {pickerPosition:'top'} scolor  corner   dots" style="width: 80px; color: rgb(0, 0, 0); background-image: none; background-color: rgb(97, 255, 239); height: 30px;" autocomplete="off">
+         <br>
+         <label class="   label label-primary">لون الخط</label>
+         <input class="color {pickerPosition:'top'} mcolor  corner   dots" style="width: 80px; color: rgb(0, 0, 0); background-image: none; background-color: rgb(0, 0, 0);height: 30px;" autocomplete="off">
+         <br>
+         <div class="   label label-primary">لون الخلفيه</div>
+         <input class="color {pickerPosition:'top'} sbg  corner   dots" style="width: 80px; color: rgb(0, 0, 0); background-image: none; background-color: rgb(255, 62, 23);height: 30px;" autocomplete="off">
+         <a class=" border  label mini label-success    hand fa fa-edit fr" style="padding:6px;margin-right:2px;" onclick="setprofile();">حـفـظ</a>
+
+       </div>
+     </div>
+     
+<select id="zoom" style="width: 98%;" class="fl btn btn-primary" onchange="document.body.style.zoom=$(this).val();fixSize(1);setv('zoom',$(this).val());">
+  <option value="1.20">%120 - حجم الخطوط</option>
+  <option value="1.10">%110 - حجم الخطوط</option>
+  <option value="1.05">%105 - حجم الخطوط</option>
+  <option seleceted="seleceted" value="1">%100 - حجم الخطوط</option>
+  <option value="0.95">%95 - حجم الخطوط</option>
+  <option value="0.9">%90 - حجم الخطوط</option>  
+</select>
+<script>
+$(document).ready(function(){
+  var vl=getv('zoom');
+if(vl==''){vl='1';setv('zoom',vl);}
+  if(isNaN(parseInt(vl))==false)
+  { 
+  $('#zoom').val(vl).trigger('change');fixSize(1);
+  }
+});
+</script>
+<label onclick="sendpic();" style="background-color: ghostwhite;color: black !important ;margin:4px; padding:8px;width:98%;" class="label tc border  btn  label-info fl"><img style="width: 32px; height: 32px; margin: -8px; background-image: url(&quot;pic.png&quot;);" src="pic.png" class="fitimg fl borderg spic corner hand">تغير الصوره</label>
+<label onclick="send('setpic',{pic: 'pic.png'});" style="margin:4px; color:  black !important ;padding:8px;width:98%;" class="label tc border btn badge-danger  fl"><span class="fl fa fa-user-times" ></span> حذف الصوره</label> 
+
+<label onclick="if (nopm){nopm=false;$(this).find('span').removeClass('fa-check');}else{nopm=true;$(this).find('span').addClass('fa-check');};send('busy',{busy:nopm});" style="background-color: ghostwhite;color: black !important;margin:4px; padding:8px;width:98%;" class="label tc border  btn   fl"><span class="fa fl"></span>تعطيل المحادثات الخاصه</label>
+<br>  
+          <label onclick="if (nonot){nonot=false;$(this).find('span').removeClass('fa-check');}else{nonot=true;$(this).find('span').addClass('fa-check');} ;" style="background-color: ghostwhite;color: black !important ;margin:4px; padding:8px;width:98%;" class="label tc border  btn   fl"><span class="fa fl"></span>تعطيل التنبيهات</label>
+<br>
+<label onclick="pmsg();" style="background-color: ghostwhite; color: black !important; margin: 4px; padding: 8px; width: 98%; display: none;" class="label tc border pmsg  btn  label-info fl"><span class="fl fa fa-send"></span>إرسال إعلان</label>
+<br>
+<label onclick="if(myroom!=null){redit(myroom);}" style="background-color: ghostwhite; color: black !important; margin: 4px; padding: 8px; width: 98%; display: none;" class="label tc border redit  btn  label-info fl"><span class="fl fa fa-home"></span>إداره الغرفه</label>
+<br>
+<label onclick="window.open('cp?token='+token,'_blank');" style="background-color: ghostwhite; color: black !important; margin: 4px; padding: 8px; width: 98%; display: none;" class="label tc border cp  btn badge-danger  fl"><span class="fl fa fa-star"></span>لوحه التحكم</label>
+<br>
+<label onclick="logout();" style="margin:4px; padding:8px;width:98%;" class="label border  btn badge-danger  tc fl"><span class="fl fa fa-sign-out"></span>تسجيل خروج</label>
+<br>
+
+
+   </div>

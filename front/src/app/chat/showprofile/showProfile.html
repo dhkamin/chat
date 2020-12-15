@@ -1,0 +1,98 @@
+<!--  
+
+    <div class="chowprofile-top">
+        <div class="chowprofile-top-l">  <p class="chowprofile-top-title">إنشاء غرفه جديدة</p></div>
+         <div class="chowprofile-top-s"></div>
+        <div class="chowprofile-top-r">
+          <button  (click)="onNoClick()" class="chowprofile-top-btn"><mat-icon >close</mat-icon></button>
+          
+        </div>
+      
+      
+    
+     </div>
+    <div mat-dialog-content>
+       <div class="chowprofile">
+        <div class="chowprofile-t">
+            <div> 
+                <img src="../../../assets/z1d7prg6rk10.jpeg" class="chowprofile-image" alt="">
+            </div>
+            <div >  <p class="chowprofile-text"> {{data.datamessage}} </p> </div>
+        </div>
+        <div class="chowprofile-m">
+            <div class="chowprofile-m-l">
+                <img src="../../../assets/imgg/de.gif" alt="">تونس
+            </div>
+           
+            <div> 
+                <button class="chowprofile-m-btn" >  <img src="../../../assets/prv1.png" alt="" class="chowprofile-m-btn-img"> <span class="chowprofile-m-btn-text"> ( 7 ) الغرفه العامه</span></button>
+            </div>
+        </div>
+       
+        <div class="chowprofile-b">
+            <button mat-raised-button   class="chowprofile-b-btn"  (click)="openMsgprivee()" ><mat-icon >chat_bubble</mat-icon>محادثه خاصه</button>
+            <button mat-raised-button   class="chowprofile-b-btn"  ><mat-icon >mail_outlined</mat-icon>تنبيه</button>
+            <button mat-raised-button   class="chowprofile-b-btn" style="color: red;" ><mat-icon >favorite</mat-icon>0</button>
+            
+        </div>
+    </div>
+        
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button [mat-dialog-close]="data"  class="chowprofile-b-btn"   style="color: red;" ><mat-icon >not_interested</mat-icon>تجاهل</button>
+    </div> 
+ -->
+
+ <div  id="upro" role="dialog" style="z-index: 2100; display: block;">
+        <div >
+          <div class="modal-content" style="width:340px;margin:-1px;margin: -25px 0px -25px -25px;">
+            <div style="color:white;margin-top:-1px;" onclick="$(this).parent().parent().parent().modal('hide');" class="modal-header label-primary">
+              <span class="pull-right clickable badge-secondary" style="width: 20px;border-radius: 20px;" (click)="onNoClick()">
+                <i class="fa fa-times" style=" position: relative; left: 4px;" ></i></span>   
+               
+              <label style="margin:1px;max-width:90%;" class="mini dots nosel modal-title"><img style="width:18px;height:18px;" src="../../../assets/imgg/pic.png">اعرجية وافتخر</label>
+            </div>
+            <div class="modal-body" style="padding:1px;">
+              <div class="light fl pro center break" style="width:100%;border:1px solid lightgrey; padding:0px;margin:0px;">
+                <div style="text-align: center;">
+                  <div class="u-pic fitimg" style="width: 98%; height: 200px; background-image: url(../../../assets/z1df1skkm110.gif);"></div> 
+    
+                  <label style="width:100%;text-align:end;margin-bottom:0px;" class="">
+                  <div style="width:100%;padding:2px;text-align: center;" class="fl u-msg">{{data.datamessage}}</div>
+                  <div class="fl mini u-co" style="margin:4px;">العراق<img class="fl" src="../../../assets/imgg/iq.gif"></div>
+                  <div class="ui-corner-all ui-shadow fr u-room"><div class="fl btn btn-primary dots roomh border" style="padding:0px 5px;max-width:180px;" onclick="rjoin('16be4a4a8b1xe9c470dx-x27f7n')"><img style="max-width:24px;" src="../../../assets/prv1.png" >( 4 ) الغرفه العامه</div></div> 
+                  </label> 
+                </div>
+                <a class="fl fa fa-comment  btn ui-corner-all ui-shadow ui-btn ui-btn-inline upm borderg" style="color:black;margin:2px;width: 106px;text-align: center;"  (click)="openMsgprivee()" >محادثه خاصه</a>
+                
+                <a class="fl fa fa-envelope-o btn ui-corner-all ui-shadow ui-btn ui-btn-inline unot borderg" style="color:black;margin:2px;width: 106px;text-align: center;">تنبيه</a>
+                <a class="fl fa fa-heart btn ui-corner-all ui-shadow ui-btn ui-btn-inline ulike borderg" style="margin:2px;color:red;width: 106px;text-align: center;">1</a>
+                <a data-trigger="focus" tabindex="0" data-toggle="popover" class="fl fa fa-diamond btn ui-corner-all ui-shadow ui-btn ui-btn-inline ugift borderg" style="color: blue; margin: 2px; width: 106px; text-align: center; display: none;">ارسل هديه</a>
+                <a class="fl fa fa-search btn ui-corner-all ui-shadow ui-btn ui-btn-inline uh borderg" style="color: black; margin: 2px; width: 106px; text-align: center; display: none;">كشف النكات</a>
+               
+                <a class="fl fa fa-ban btn ui-corner-all ui-shadow ui-btn ui-btn-inline udelpic borderg" style="color: maroon; margin: 2px; width: 106px; text-align: center; display: none;">حذف الصوره</a>
+                <a class="fl fa fa-user-times btn ui-corner-all ui-shadow ui-btn ui-btn-inline urkick borderg" style="color: darkorchid; margin: 2px; width: 106px; text-align: center; display: none;">طرد من الغرفه</a>
+                <a class="fl fa fa-ban btn ui-corner-all ui-shadow ui-btn ui-btn-inline ukick borderg" style="color: crimson; margin: 2px; width: 106px; text-align: center; display: none;">طرد</a>
+                <a class="fl fa fa-ban btn ui-corner-all ui-shadow ui-btn ui-btn-inline uban borderg" style="color: crimson; margin: 2px; width: 106px; text-align: center; display: none;">باند</a>
+                <a class="fl fa fa-warning btn ui-corner-all ui-shadow ui-btn ui-btn-inline ureport borderg" style="color: black; margin: 2px; width: 106px; text-align: center; display: none;">تبليغ</a>
+                <a class="fl fa fa-ban btn ui-corner-all ui-shadow ui-btn ui-btn-inline umute borderg" style="color:red;width: 106px;text-align: center;">تجاهل</a>
+                <a class="fl fa fa-check btn ui-corner-all ui-shadow ui-btn ui-btn-inline uunmute borderg" style="color: red; width: 106px; text-align: center; display: none;">إلغاء التجاهل</a>
+                <div class="border nickbox fl" style="padding: 4px; margin-top: 2px; width: 100%; display: none;">
+    <label class="label fl label-primary" style="height: 32px;padding: 8px;">الزخرفه</label>
+    <textarea class="borderg corner  fl u-topic" style="height:32px;padding:4px;width:60%;resize:none;"></textarea>
+    <label class="btn btn-primary u-nickc fr fa fa-save">تغير</label>
+    </div>
+                <div class="border fl powerbox" style="width: 100%; padding: 4px; margin-top: 2px; display: none;">
+                  <label>المجموعه</label><br>
+                  <select style="width:200px;display:inline;" class="userpower selbox form-control">
+                </select><br>
+                  <label>المده بالأيام</label><br>
+                  <input type="number" class="userdays"><br>
+                  <a class="fa fa-check btn ui-corner-all ui-shadow ui-btn ui-btn-inline upower border" style="margin:2px;">حفظ</a>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

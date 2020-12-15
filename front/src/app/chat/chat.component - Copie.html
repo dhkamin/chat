@@ -1,0 +1,194 @@
+<div class="top-chat" (click)="onClose('close')">
+      <span class="top-chat-span" >اهلا وسهلا بكم في ( بنوتة قلبي ) نتمنى لكم اطيب الاوقات</span>
+</div>
+<!-- 
+
+ <div class="content-chat" (click)="onClose('close')">
+
+<div *ngFor="let msg of messages" class="content-chat-box">
+  <div>
+      <img (click)=" openDialog(msg)" src="../../assets/z1d7prg6rk10.jpeg" alt=""  class="content-chat-box-img" >
+  </div>
+  
+  <div class="content-chat-box-content" >
+    <div  ><img src="../../assets/imgg/z1crbn8ci410.gif" alt="" class="pack-user"  > {{msg.fromUser}}  </div>
+    <div  class="content-chat-box-content-bottom">
+      <button mat-raised-button    class="button-chat"><mat-icon class="content-chat-top-icon" >publish</mat-icon> <span class="span-button-chat-user">(35)</span>  الغرفه العامه</button>
+     <span>{{msg.message}}</span>
+    </div>
+  </div>
+  <div class="content-chat-box-content-left" >0د</div>
+
+</div>
+ 
+</div>  -->
+
+
+<div class="panel-body" style="height: 827px;;" (click)="onClose('close')" >
+  <div class="uzr fl corner borderg mm" style="border-radius:5px;margin:3px;width:99%;padding:0px; background-color:white;" *ngFor="let msg of messages" >
+
+     <img style="width:50px; height: 50px;  border-radius: 50%;
+margin-left: 1px; margin-top: 1px; background-image: url(../../assets/1df9rmm5i10.jpeg.jpg);margin-right: 10px;" (click)=" openDialog(msg)" class="fl fitimg hand u-pic  ">
+     <span style="margin-top:2px;padding:0px 2px;margin-left:-20px;margin-right:4px;color:grey" class="fr minix tago" ago="1562752587622">الآن</span>
+     <div class="uzr fl" style="padding:0px;width:80%">
+       <div style="padding:0px;width:100%;" class="fl">
+         <img class="fl u-ico" alt="">
+         <span style="padding: 1px 8px; margin-top: 2px; display: block; max-width: 82%; border-radius: 3px; color: rgb(255, 253, 240); background-color: rgb(13, 13, 13);" class="corner nosel u-topic dots fl hand">  {{msg.fromUser}}  m </span>
+       </div>
+       <br>
+       <div style="padding:0px; width:100%;" class=" u-msg   break  fl"> {{msg.message}}  {{msg.message}}   &nbsp;</div>
+     </div>
+   </div>
+
+
+  
+</div>
+
+
+<div class="panel-footer top" id="footer" (click)="onClose('close')">
+  <div class="input-group">
+<span class="input-group-btn">
+          <button class="btn btn-error btn-sm" id="btn-chat" style="margin:5px" (click)="sendMessage(mess)">
+             <i class="fas fa-paper-plane" aria-hidden="true"></i>
+             إرسال</button>
+      </span>
+
+      <input id="message" type="text" class="form-control input-sm" placeholder="Type your message here..."
+      #message maxlength="256" placeholder="أكتب رسالتك هنا" [(ngModel)]="mess"  (keyup)="$event.keyCode == 13 && sendMessage()">
+       <mat-hint align="end">{{message.value.length}} / 256</mat-hint> 
+
+<i class="em em-full_moon_with_face" style="margin: auto 10px;"></i>
+      <span class="input-group-btn">
+          <button class="btn btn-warning btn-sm" id="btn-chat" style="margin:5px;width:100px"  (click)="sendMessage(mess)">
+             <i class="fas fa-paper-plane" aria-hidden="true"></i>
+             إرسال</button>
+      </span>
+  </div>
+</div>
+
+<div class="bottom-chat">
+<!--   <div class="bottom-chat-top" (click)="onClose('close')">
+      
+      <button mat-raised-button   class="button-chat" (click)="sendMessage(mess)">إرسال<mat-icon class="botton-chat-top-icon" >send</mat-icon></button>
+   
+       <mat-form-field class="example-full-width">
+          <input matInput #message maxlength="256" placeholder="أكتب رسالتك هنا" [(ngModel)]="mess"  (keyup)="$event.keyCode == 13 && sendMessage()">
+
+           <mat-hint align="end">{{message.value.length}} / 256</mat-hint> 
+       </mat-form-field>
+      <button mat-raised-button   class="button-chat-icon"><mat-icon >sentiment_satisfied_alt</mat-icon></button>
+      <button mat-raised-button   class="button-chat"><mat-icon >attach_file</mat-icon></button>
+
+  </div> -->
+  <div>
+    <button mat-raised-button   class="button-chat-bottom" (click)="open('usersConnected')"><mat-icon >person</mat-icon><span class="span-button-chat">99 </span></button>
+    <button mat-raised-button   class="button-chat-bottom" (click)="open('privateMsg')"><mat-icon >chat_bubble</mat-icon></button>
+    <button mat-raised-button   class="button-chat-bottom" (click)="open('chambre')"><mat-icon >group</mat-icon><span class="span-button-chat">99 </span> الغرف </button>
+    <button mat-raised-button   class="button-chat-bottom" (click)="open('mure')"><mat-icon  >comment</mat-icon> <span class="span-button-chat">99 </span> الحائط </button>
+    <button mat-raised-button   class="button-chat-bottom" (click)="open('parametre')"><mat-icon >settings</mat-icon>الإعدادات</button>
+</div>
+ 
+</div>
+<div class="pageright"  *ngIf="menu === 'usersConnected'" >
+ 
+  <div  class="top-pagerightclose">
+      <span class="span-page-right-top-close">المتواجدين</span>
+   
+
+     <button mat-raised-button  (click)="onClose('close')"  class="button-page-right-top-close-private"><mat-icon >close</mat-icon></button>
+    </div>
+  <div  class="top-pagerightcontent">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite food" >
+      </mat-form-field>
+    <app-privatemsg></app-privatemsg>
+    </div>
+  
+  </div>
+<div class="pageright"  *ngIf="menu === 'parametre'" >
+     
+  <div  class="top-pagerightclose">
+     <span class="span-page-right-top-close">الإعدادات</span>
+     <button mat-raised-button  (click)="onClose('close')"  class="button-page-right-top-close"><mat-icon >close</mat-icon></button>
+    </div>
+  <div  class="top-pagerightcontent">
+    <app-parametre></app-parametre>
+    </div>
+
+</div>
+<div class="pageright"  *ngIf="menu === 'mure'" >
+ 
+<div  class="top-pagerightclose">
+    <span class="span-page-right-top-close">الحائط</span> 
+   <button mat-raised-button  (click)="onClose('close')"  class="button-page-right-top-close"><mat-icon >close</mat-icon></button>
+  </div>
+<div  class="top-pagerightcontent">
+   <app-mure></app-mure>
+  </div>
+
+</div>
+<div class="pageright"  *ngIf="menu === 'chambre'" >
+ 
+<div  class="top-pagerightclose">
+    <span class="span-page-right-top-close">الغرف</span>
+   <button mat-raised-button  (click)="onClose('close')"  class="button-page-right-top-close"><mat-icon >close</mat-icon></button>
+  </div>
+<div  class="top-pagerightcontent">
+   <app-chambre></app-chambre>
+  </div>
+
+</div>
+<div class="pageright"  *ngIf="menu === 'privateMsg'" >
+ 
+  <div  class="top-pagerightclose">
+      <span class="span-page-right-top-close">المحادثات الخاصه</span>
+     <button mat-raised-button  (click)="onClose('close')"  class="button-page-right-top-close-private"><mat-icon >close</mat-icon></button>
+    </div>
+  <div  class="top-pagerightcontent">
+     <app-privatemsg></app-privatemsg>
+    </div>
+  
+  </div>
+
+<!-- <div class="send-msg-privee" *ngIf="sendmsg === 'sendMsgprive'" > -->
+  <!-- <div class="send-msg-privee-t">
+     <div class="send-msg-privee-t-l">
+        <mat-icon class="send-msg-privee-t-l-icon" >person</mat-icon>
+        <img class="send-msg-privee-t-l-img1" src="../../assets/s0.png" alt="">
+        <img class="send-msg-privee-t-l-img2" src="../../assets//prv1.png" alt="">
+        <img class="send-msg-privee-t-l-img3" src="../../assets/imgg/z1cs8511ih10.gif" alt="">
+        <span class="send-msg-privee-t-l-text">trtrtrtrtrt</span>
+     </div>
+    
+     <div class="send-msg-privee-t-r">
+        <button mat-raised-button   class="send-msg-privee-t-r-btn" style="background-color: #28a4c9;min-width: 40px;" ><mat-icon class="send-msg-privee-t-r-btn-icon" >open_with</mat-icon></button>
+        <button mat-raised-button  (click)="closeSendmsgprive()"  class="send-msg-privee-t-r-btn" style="background-color: #b92c28;min-width: 40px;border-radius: 0px 24px 0px 0px;" ><mat-icon class="send-msg-privee-t-r-btn-icon" >remove</mat-icon></button>
+     </div>
+  </div>
+  <div class="send-msg-privee-b">
+      <app-sendmsg-privee></app-sendmsg-privee>
+  </div> -->
+  <div  *ngIf="sendmsg === 'sendMsgprive'" >
+  <div style="width: 100%; height: 100%; max-height: 100%; max-width: 100%; padding: 0px;" class="center-block bg dad">
+    <div class="bgg border corner w16bf0c30de6x33866712-xwo0sj9 active" style="border-bottom-right-radius: 1em; overflow-y: hidden; position: absolute; top: 1px; min-height: 180px; max-height: 500px; height: 50%; width: 97%; max-width: 500px; padding-bottom: 25px;">
+      <div style="width:100%;height:30px;" class="head nosel bg fl">
+        <label class="label fl hand fa border fa-user" style="margin:2px;margin-right: 2px;">&nbsp;</label>
+        <label style="padding:8px;" class="btn minix btn-danger phide fr border fa fa-minus" (click)="closeSendmsgprive()">&nbsp;&nbsp;</label>
+        <label style="padding:8px;" onclick="var pp=$(this).parent().parent();if($(this).hasClass('fa-expand')){pp.css('height','86%');}else{pp.css('height','50%');}$(this).toggleClass('fa-expand fa-compress');fixSize();" class="btn   btn-info   fr border fa fa-expand">&nbsp;&nbsp;</label>
+      
+    <div class="fl  uzr" style="margin:3px;width:65%;">
+      <img class="fl ustat" style="width: 12px; height: 12px; border-radius: 12px; position: static; margin-top: 10px; margin-left: 0px;" src="../../assets/imgg/s1.png?2">
+      <img style="width: 20px; height: 20px; background-image: url(../../assets/1df9rmm5i10.jpeg.jpg);" class="fitimg fl hand u-pic ">
+      <div style="width: 280px;" class="fl filw">
+        <div style="width:100%;margin-top:0px;" class="fl">
+          <img class="fl u-ico" alt="" src="">
+          <div class="fl" style="width:90%;"><span style="max-width: 100%; padding: 1px 8px; border-radius: 3px; color: rgb(0, 0, 0); background-color: rgb(250, 250, 250);" class="corner nosel u-topic dots">uiuiouo</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+     <app-sendmsg-privee></app-sendmsg-privee>
+    </div>
+	</div>
+ 
+</div>

@@ -1,0 +1,66 @@
+
+<!-- <div class="msg-privee-b">
+   <div class="msg-privee-b-top">
+
+  
+      <div *ngFor="let msg of messages" class="msg-privee-box">
+         <div class="msg-privee-box-l" >
+            <img src="../../../../assets/prv1.png" alt="">
+         </div>
+         <div class="msg-privee-box-m" >
+            <div>{{msg.fromUser}}</div>
+            <div class="msg-privee-box-m-p2">{{msg.message}}</div>
+         </div>
+         <div class="msg-privee-box-r" >
+             <p>0د</p>
+         </div>
+         
+      </div>
+   liste  msg  privé  ng for  
+
+   </div>
+   <div class="msg-privee-b-bottom" >
+
+         button send  msg  privé 
+      <button mat-raised-button   class="msg-privee-b-bottom-btn" style="background-color: black;" ><mat-icon class="botton-chat-top-icon" (click)="sendMessage(mes_priv)" >send</mat-icon></button>
+    
+       <mat-form-field class="msg-privee-b-bottom-f-input">
+          <input  #message maxlength="256" placeholder="أكتب رسالتك هنا" [(ngModel)]="mes_priv"  (keyup)="$event.keyCode == 13 && sendMessage()"  >
+    
+           <mat-hint align="end">{{message.value.length}} / 256</mat-hint> 
+       </mat-form-field>
+
+      <button mat-raised-button   class="" ><mat-icon  >sentiment_satisfied_alt</mat-icon></button>
+      <button mat-raised-button   class="msg-privee-b-bottom-btn" style="background-color: #024349; border-color:#245580; "><mat-icon >share</mat-icon></button>
+      <button mat-raised-button   class="msg-privee-b-bottom-btn" style="background-color: #5cb85c; border-color:#4cae4c "><mat-icon >call</mat-icon></button>
+    
+    </div>
+ </div> -->
+ <div class="cont fr filh" style="min-height: 100%; width: 100%; background: white;" >
+   <div class="d2 filh break light support" style="height: 320px;" id="d216bf0c30de6x33866712-xwo0sj9">
+
+   <div class="uzr fl corner borderg mm  " style="border-radius:5px;margin-bottom:-2px;width:99.5%;padding:0px; background-color:white;"  *ngFor="let msg of messages">
+ <img style="width: 36px; height: 38px; margin-left: 1px; margin-top: 1px; background-image: url(../../assets/1df9rmm5i10.jpeg.jpg);" class="fl fitimg hand u-pic    ">
+ <span style="margin-top:2px;padding:0px 2px;margin-left:-20px;margin-right:4px;color:grey" class="fr minix tago" ago="1563112302699">11د</span>
+ <div class="uzr fl" style="padding:0px;width:80%">
+   <div style="padding:0px;width:100%;" class="fl">
+     <img class="fl u-ico" alt="">
+     <span style="padding: 1px 8px; margin-top: 2px; display: block; max-width: 82%; border-radius: 3px; color: rgb(0, 0, 0);" class="corner nosel u-topic dots fl hand">{{msg.fromUser}}</span>
+   </div>
+   <br>
+   <div style="padding:0px; width:100%;" class=" u-msg   break  fl">{{msg.message}}&nbsp;</div>
+ </div>
+</div>
+
+
+</div>
+   <div class="tablebox footer light fl" style="width:100%;padding:4px; display: flex; position: absolute; bottom: 0;"> 
+     <button style=" margin-top:2px;margin-left:2px;" class="fa fa-phone call fl btn btn-success"></button>
+     <button style="margin-left:4px; margin-right:3px;margin-top:2px;" class="fr fa fa-share-alt sndfile fl btn btn-primary"></button>
+     <img tabindex="0" role="button" data-toggle="popover" data-trigger="focus" class="fl nosel emo emo16bf0c30de6x33866712-xwo0sj9" style="padding:5px;width:34px;" src="imgs/emoii.gif" data-original-title="" title="">
+    
+     <textarea  #message maxlength="256" [(ngModel)]="mes_priv"  (keyup)="$event.keyCode == 13 && sendMessage()" placeholder="اكتب رسالتك هنا" class="fl filw corner tbox tbox16bf0c30de6x33866712-xwo0sj9" style="    width: 317px; height: 35px;"></textarea>
+    <button style=" margin-top:2px;margin-left:2px;" class="fa fa-send sndpm fl btn btn-primary" (click)="sendMessage(mes_priv)"></button> 
+    
+   </div>
+ </div>
